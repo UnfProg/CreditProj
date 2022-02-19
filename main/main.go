@@ -43,11 +43,11 @@ func payForMonth(sum int, rate float64, time int, firstPay int) float64 {
 }
 func makeReport(sum int, rate float64, time int, firstPay int, monPay float64) []string {
 	report := []string{}
-	report = append(report, fmt.Sprintf("%30s: %v\n", sumStr, sum))
-	report = append(report, fmt.Sprintf("%30s: %v\n", timeStr, time))
-	report = append(report, fmt.Sprintf("%30s: %v\n", percentStr, rate))
-	report = append(report, fmt.Sprintf("%30s: %v\n", firPay, firstPay))
+	report = append(report, fmt.Sprintf("%30s: %v\n рублей", sumStr, sum))
+	report = append(report, fmt.Sprintf("%30s: %v\n год(а)", timeStr, time))
+	report = append(report, fmt.Sprintf("%30s: %v\n процентов", percentStr, rate))
+	report = append(report, fmt.Sprintf("%30s: %v\n рублей", firPay, firstPay))
 	report = append(report, "----------------------------------------------------------\n")
-	report = append(report, fmt.Sprintf("%30s: %.2f\n", monStr, monPay))
+	report = append(report, fmt.Sprintf("%30s: %.2f\n рублей", monStr, monPay))
 	return report
 }
